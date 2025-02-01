@@ -12,4 +12,8 @@ public class PendingOrder {
         this.productId = productId;
         this.quantity = quantity;
     }
+
+    public void assignId(final long nextId) {
+        this.id = nextId;
+    }
 }
