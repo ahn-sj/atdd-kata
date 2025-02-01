@@ -1,10 +1,13 @@
 package atdd.application;
 
 import atdd.domain.PendingOrder;
+import atdd.domain.PendingOrderRepository;
+import atdd.infra.PendingOrderInMemoryRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CreateOrderServiceTest {
+    private PendingOrderRepository pendingOrderRepository = new PendingOrderInMemoryRepository();
     private CreateOrderService createOrderService = new CreateOrderServiceImpl(pendingOrderRepository);
 
     @Test

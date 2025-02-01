@@ -9,6 +9,9 @@ public class PendingOrderResponse {
     private long productId;
     private long quantity;
 
+    private PendingOrderResponse() {
+    }
+
     public PendingOrderResponse(final PendingOrder pendingOrder) {
         this.id = pendingOrder.getId();
         this.productId = pendingOrder.getProductId();

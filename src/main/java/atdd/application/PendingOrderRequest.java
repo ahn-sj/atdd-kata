@@ -7,6 +7,9 @@ public class PendingOrderRequest {
     private long productId;
     private long quantity;
 
+    private PendingOrderRequest() {
+    }
+
     public PendingOrderRequest(final Long productId, final int quantity) {
         this.productId = productId;
         this.quantity = quantity;
