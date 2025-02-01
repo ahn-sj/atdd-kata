@@ -13,3 +13,9 @@ Feature: 구매
 
 - Acceptance Test를 위해 Outside In 방식으로 ControllerTest 작성
 - Acceptance Test를 통과하기 위한 ServiceTest 작성
+
+---
+
+## keyword
+ 
+- API First
