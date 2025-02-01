@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CreateOrderServiceTest {
-    private CreateOrderService createOrderService = new CreateOrderServiceImpl();
+    private CreateOrderService createOrderService = new CreateOrderServiceImpl(pendingOrderRepository);
 
     @Test
     void createPendingOrder() {
