@@ -18,16 +18,16 @@
 
 ## 인수테스트 도구
 
-\[Server Tool\]
+[Server Tool]
 
 - @SpringBootTest
 
-\[Client Tool\]
+[Client Tool]
 
 - MockMvc
 - RestAssured
 
-\[Test Tool\]
+[Test Tool]
 - JUnit
 - AssertJ
 
