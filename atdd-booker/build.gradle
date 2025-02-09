@@ -53,6 +53,42 @@ dependencies {
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
-tasks.named('test') {
+// ---------------------------
+// 기본 test Task (전체 테스트)
+// ---------------------------
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}
+
+// ---------------------------
+// 1) unitTest Task
+// ---------------------------
+task unitTest(type: Test) {
+    group = "verification"
+    include '**/unit/**'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform()
+}
+
+// ---------------------------
+// 2) integrationTest Task
+// ---------------------------
+task integrationTest(type: Test) {
+    group = "verification"
+    include '**/integration/**'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform()
+}
+
+// ---------------------------
+// 3) acceptanceTest Task
+// ---------------------------
+task acceptanceTest(type: Test) {
+    group = "verification"
+    include '**/acceptance/**'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
     useJUnitPlatform()
 }
